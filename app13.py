@@ -22,11 +22,11 @@ with st.container():
 
     with col2:
         st.header("사물 검출 결과 영상")
-        
+        result_placeholder = st.empty()
         if "processed_video" in st.session_state:
             st.video(st.session_state["processed_video"])
         else:
-        result_placeholder = st.empty()
+        
             result_placeholder.markdown(
                 """
                 <div style='width:100%; height:620px; background-color:#d3d3d3; display:flex; align-items:center; justify-content:center; border-radius:5px;'>
